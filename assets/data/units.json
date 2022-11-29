@@ -1,0 +1,19 @@
+{
+    "standardUPs" : [
+        {"name": "up_start"},
+        {"name": "up_tr_start"},
+        {"name": "up_reaktion"},
+        {"name": "up_tr"},
+        {"name": "up_tr_dos"},
+        {"name": "up_warten"},
+        {"name": "up_ende"},
+        {"name": "up_waehlen"},
+        {"name": "up_melden"},
+        {"name": "up_dest"},
+        {"name": "up_fest"},
+        {"name": "up_vp_ein"},
+        {"name": "up_vp_aus"},
+        {"name": "up_dest_aus"},
+        {"name": "up_dest_ein"}
+    ]
+}

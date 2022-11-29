@@ -1,0 +1,208 @@
+{
+    "recipe": [
+        {
+            "productName": "Asura-5",
+            "ups": [
+                {                    
+                    "unitName": "UP_Q2800_START:1",
+                    "diagramm": "q2800/upstart.png",
+                    "desc": "OP Start stellt die Apparateparameter der UNIT ein. Je nach UNIT können diese unterschiedlich sein. Im Normalfall werden allgemeine Alarme gesetzt. Bei Rührwerken wird der HKK in Betrieb genommen und abgefragt, ob die UNIT ein SIS hat",
+                    "unit_param": [
+                        {
+                            "name": "FP_ABGAS_TAH",
+                            "value": 80,
+                            "desc": "Austritstemp. Abgas H",
+                            "newValues": [
+                                {
+                                    "date": "22.05.2022",
+                                    "value": 75
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FP_ABGAS_TAHH",
+                            "value": 85,
+                            "desc": "Austritstemp. Abgas HH löst SS aus",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_APP_ABLUFT_1",
+                            "value": "kein Abluftsystem",
+                            "desc": "Bei Wäscherstörung geht RW in SS ",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_APP_ABLUFT_2",
+                            "value": "kein Abluftsystem",
+                            "desc": "Bei Wäscherstörung geht RW in SS ",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_APP_SOLE",
+                            "value": 45,
+                            "desc": "Umschaltpunkt kalter zu Warmer Sole",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_HK_OPT",
+                            "value": "Mantel",
+                            "desc": "Option Mantel oder Innentemp",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_HK_OPT_HO",
+                            "value": "Mantel",
+                            "desc": "Option Mantel oder Innentemp bei SS",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_HK_TCW",
+                            "value": 25,
+                            "desc": "Sollwert HKK für HK Option",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_HK_TCW_HO",
+                            "value": 25,
+                            "desc": "Sollwert HKK für HK Option bei SS",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_KK_OPT",
+                            "value": "EIN",
+                            "desc": "Ein- Ausschalten KK Kreislauf",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_KK_TAH",
+                            "value": 40,
+                            "desc": "Temp. Alarm H Kühler",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_KK_TAHH",
+                            "value": 45,
+                            "desc": "Temp. Alarm HH [SS",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_KK_TCW",
+                            "value": 35,
+                            "desc": "Temp. Sollwert Kühler",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_SIS_EIN",
+                            "value": false,
+                            "desc": "TRUE kontrolliert ob richtiges SIS aktiv ist",
+                            "newValues": [
+                                {}
+                            ]
+                        },
+                        {
+                            "name": "FP_SIS_PRODUKT",
+                            "value": "Q2800_SULF_SIS",
+                            "desc": "Produkte Name SIS Parameter",
+                            "newValues": [
+                                {}
+                            ]
+                        }
+                    ],
+                    "ops": [
+                        {
+                            "posY": 1,
+                            "posX": 1,
+                            "opName": "OP_MELDEN:1",
+                            "desc": "Startkontrolle",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 1,
+                            "posX": 2,
+                            "opName": "OP_BEDING_DI:1",
+                            "desc": "SIS Abfrage",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 2,
+                            "posX": 1,
+                            "opName": "OP_DRUCK:1",
+                            "desc": "Normal",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 2,
+                            "posX": 2,
+                            "opName": "OP_SET_AKTR_25:1",
+                            "desc": "Bodenventil schliessen",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 2,
+                            "posX": 3,
+                            "opName": "OP_HK:1",
+                            "desc": "Mantel",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 3,
+                            "posX": 1,
+                            "opName": "OP_BEGAS:1",
+                            "desc": "Normal",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 3,
+                            "posX": 2,
+                            "opName": "OP_SET_ALAR_15:1",
+                            "desc": "Alarme setzen",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 3,
+                            "posX": 3,
+                            "opName": "OP_KONDENS",
+                            "desc": "Kühler einstellen",
+                            "op_params": []
+                        },
+                        {
+                            "posY": 4,
+                            "posX": 1,
+                            "opName": "OP_SET_AP_B:1",
+                            "desc": "Apparateparameter",
+                            "op_params": []
+                        }
+                    ]
+                },
+               {
+                "unitName" : "UP_Q2800_TR_START:1"
+               }
+
+            ]
+        }
+    ]
+}

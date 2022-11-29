@@ -1,0 +1,22 @@
+{
+    "ops": [
+        {"name": "op_set_aktr", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_set_aktr_25", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_transf", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_transf_1", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_transf_2", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_beding", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_beding_di", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_warten", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_melden", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_kondens", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_hk", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_begas", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_druck", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_destil", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_set_alarm", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_set_alar_15", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_set_regler", "params": [{"value":"", "desc":"","name":""}]},
+        {"name": "op_set_gop", "params": [{"value":"", "desc":"","name":""}]}
+    ]
+}
