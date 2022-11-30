@@ -1,0 +1,22 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lato:wght@300;400;700;900&family=Spectral:ital,wght@1,200&display=swap');
+
+$font-size: 1.6rem;
+$font-primary: 'Inter', "Arial Roman", sans-serif;
+$font-italy: "Spectral", "Georgia Italic";
+
+$bg-image: url('../assets/logos/Background-White.png');
+
+// Colors
+
+$col-orange: #ff6b33;
+$col-orange-50: lighten($col-orange, 50);
+$col-mint: #77eedf;
+$col-blue: #0000ff;
+$col-mid-blue: #4f8ceb;
+$col-pal-blue: #abcfe3;
+$col-gray: #dbdbdb;
+$col-white: #fff;
+$col-black: #000;
+$col-font-secondary: white;
