@@ -15,6 +15,7 @@ func LoadServer() {
 
 	router.GET(routes.RootName, routes.GetRoot("./api/data/units.json"))
 	router.GET(routes.UPName, routes.GetUP("units.json"))
+	router.GET(routes.FactoryName, routes.GetFactory("./api/data/units.json"))
 
 	server := http.Server{Addr: PORT, Handler: router}
 	err := server.ListenAndServe()
