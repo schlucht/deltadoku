@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import OtsHeader from './components/OtsHeader.vue';
 import axio from 'axios'
 import { ref } from 'vue'
     let hy = ref();
@@ -14,8 +15,11 @@ import { ref } from 'vue'
 </script>
 
 <template>
-    <router-view />
-    <h2>{{ hy }}</h2>
+    <div>
+        <ots-header></ots-header>
+        <router-view />
+        <h2>{{ hy }}</h2>
+    </div>
 </template>
 
 <style lang="scss" scoped>

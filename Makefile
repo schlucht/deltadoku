@@ -15,3 +15,4 @@ compile:
 	GOOS=freebsd GOARCH=386 go build -o bin/main-freebsd-386 main.go
 
 all: hello run
+
