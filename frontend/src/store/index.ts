@@ -10,19 +10,26 @@ const state = reactive({
 })
 const mutations = {
     loadFactories: (payload: Factory[]) => {   
-        console.log("STORE ", "MUTATIONS")     
+           
         state.factories = payload
     }
 } 
 const actions = {
     getFactories:async () => {     
         const data = await Factories.getFactories()
-        console.log("STORE ", data)
+        
         return mutations.loadFactories(data)        
-    }      
+    }          
+}
+const getters = {
+    readAparates: ((title: string) => { 
+        const appa = state.factories.find(f => f.name === title)?.apparats
+        console.log("STORE APPA", appa)
+        return appa
+    })
 }
 
 
 export default {
-    state: readonly(state), mutations, actions
+    state: readonly(state), mutations, actions, getters
 }

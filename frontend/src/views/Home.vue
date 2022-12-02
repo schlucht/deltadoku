@@ -37,7 +37,8 @@
     </section>
 </template>
 <script setup lang="ts">
-import { ref, inject, computed, onMounted } from 'vue'
+
+import { ref, inject,  onMounted } from 'vue'
 import OtsFactoryLogo from '../logos/OtsFactoryLogo.vue';
 import { Factory } from '../models/factory';
 import { Apparat } from '../models/apparat';
@@ -46,8 +47,6 @@ const store = inject("store") as any
 
 let factories = ref<Factory[]>([]);
 let apparats = ref<Apparat[]>()
-let specialCount = ref(0)
-let standardCount = ref(0)
 
 const newFact = () => {
     console.log(new Factory("Hallo"))
@@ -59,14 +58,8 @@ onMounted(async () => {
 })
 
 
-
-
-
-const getName = (value: HTMLElement) => {
-    const ap = factories.value.find(f => f.name === value.innerText.toLowerCase())    
-    const appa = ap?.apparats as Apparat[]
-    apparats.value = appa   
-    
+const getName = (value: HTMLElement) => {  
+    apparats.value = store.getters.readAparates(value.innerText.toLowerCase())    
 }
 
 </script>
