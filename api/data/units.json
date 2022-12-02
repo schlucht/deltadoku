@@ -1,18 +1,252 @@
-{    
-    "anlagen": [{
-            "anlage": "mza d29",
+{
+    "factories": [
+        {
+            "name": "mza d29",
             "apparats": [
-                {"name": "Q2000", "description": "Rührwerk 10m3 email"},
-                {"name": "Q2200", "description": "Rührwerk 10m3 email"},
-                {"name": "Q2300", "description": "Rührwerk 10m3 email"}
+                {
+                    "name": "Q2000",
+                    "desc": "Rührwerk 10m3 email",
+                    "ups": [
+                        {
+                            "name": "UP_Q2000_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            "name": "UP_Q2000_TR",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_FSB_FQ",
+                                    "desc": "Menge Zähler",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Q2200",
+                    "desc": "Rührwerk 10m3 email",
+                    "ups": [
+                        {
+                            "name": "UP_Q2200_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Q2300",
+                    "desc": "Rührwerk 10m3 email",
+                    "ups": [
+                        {
+                            "name": "UP_Q2300_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         {
-            "anlage": "penta",
+            "name": "penta",
             "apparats": [
-                {"name": "E20500", "description": "Rührwerk Stahl 6.4m3"},
-                {"name": "D20600", "description": "Rührwerk Stahl 6.4m3"},
-                {"name": "Z0500", "description": "V4A Zentrifuge"}
+                {
+                    "name": "E20500",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_E20500_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "D20600",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_D20600_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Z0500",
+                    "desc": "V4A Zentrifuge",
+                    "ups": [
+                        {
+                            "name": "UP_Z0500_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_TA_HH",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "arylide",
+            "apparats": [
+                {
+                    "name": "X70500",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_X70500_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "F255",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_F255_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Z0999",
+                    "desc": "V4A Zentrifuge",
+                    "ups": [
+                        {
+                            "name": "UP_Z0999_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "lsm",
+            "apparats": [
+                {
+                    "name": "15R01",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_15R01_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "11R02",
+                    "desc": "Rührwerk Stahl 6.4m3",
+                    "ups": [
+                        {
+                            "name": "UP_11R02_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "13B20",
+                    "desc": "V4A Zentrifuge",
+                    "ups": [
+                        {
+                            "name": "UP_13B20_START",
+                            "desc": "Start sequenz",
+                            "special": false,
+                            "parameters": [
+                                {
+                                    "name": "FP_APP_SOLE",
+                                    "desc": "Schaltet die Sole um",
+                                    "value": 35
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         }
     ]

@@ -12,7 +12,7 @@
                     <RouterLink to="/">Produkte</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Daten</RouterLink>
+                    <RouterLink to="/daten">Daten</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/">Impressum</RouterLink>

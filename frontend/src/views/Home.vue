@@ -8,7 +8,7 @@
                 <h3>Anlagen</h3>
             </div>
             <ul>
-                <li @click="getName($event.target as HTMLElement)" v-for="f in factorys">{{f.anlage.toUpperCase()}}</li>
+                <li @click="getName($event.target as HTMLElement)" v-for="f in factories">{{f.name.toUpperCase()}}</li>
             </ul>
         </div>
         <div class="middle">
@@ -19,44 +19,54 @@
                     </div>
                     <div class="card__body">
                         <div class="card__desc">
-                            <p>{{ap.description}}</p>
+                            <p>{{ap.desc}}</p>
                         </div>
                         <div class="card__detail">
                             <em>Anzahl Standard UP:</em>
-                            <span>23</span>
+                            <span>{{ ap.ups.filter(u => !u.special).length }}</span>
                         </div>
                         <div class="card__detail">
                             <em>Anzahl Spezial UP:</em>
-                            <span>3</span>
+                            <span>{{ ap.ups.filter(u => u.special).length }}</span>
                         </div>
                     </div>
                 </div>                
             </div>
         </div>
+        <button @click="newFact()">Click mich</button>
     </section>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, inject, computed, onMounted } from 'vue'
 import OtsFactoryLogo from '../logos/OtsFactoryLogo.vue';
 import { Factory } from '../models/factory';
 import { Apparat } from '../models/apparat';
-import factoryService from '../services/factoryService';
 
-let factorys = ref<Factory[]>([]);
+const store = inject("store") as any
+
+let factories = ref<Factory[]>([]);
 let apparats = ref<Apparat[]>()
+let specialCount = ref(0)
+let standardCount = ref(0)
 
-const allFactory = async() => {
-    const response = await factoryService.getAll()
-    const facData  = await response.data
-    for (let fac of facData.anlagen) {
-        factorys.value.push(fac as Factory)        
-    }
-   
+const newFact = () => {
+    console.log(new Factory("Hallo"))
 }
-allFactory()
+
+onMounted(async () => {
+    await store.actions.getFactories()
+    factories.value =  await store.state.factories
+})
+
+
+
+
+
 const getName = (value: HTMLElement) => {
-    const ap = factorys.value.find(f => f.anlage === value.innerText.toLowerCase())    
-    apparats.value = ap?.apparats;
+    const ap = factories.value.find(f => f.name === value.innerText.toLowerCase())    
+    const appa = ap?.apparats as Apparat[]
+    apparats.value = appa   
+    
 }
 
 </script>

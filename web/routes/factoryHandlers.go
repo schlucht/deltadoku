@@ -11,12 +11,13 @@ import (
 const FactoryName = "/api/factory"
 
 func GetFactory(path string) HttpHandler {
-	data, err := ioutil.ReadFile(path)
-	if err != nil {
-		fmt.Print(err)
-	}
 
 	return func(writer http.ResponseWriter, request *http.Request, _ httprouter.Params) {
+		data, err := ioutil.ReadFile(path)
+		if err != nil {
+			fmt.Print(err)
+		}
+		fmt.Println("Daten neu gelesen")
 
 		enableCors(&writer, "application/json")
 

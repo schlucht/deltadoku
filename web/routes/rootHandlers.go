@@ -11,12 +11,12 @@ import (
 const RootName = "/api"
 
 func GetRoot(path string) HttpHandler {
-	data, err := ioutil.ReadFile(path)
-	if err != nil {
-		fmt.Print(err)
-	}
 
 	return func(writer http.ResponseWriter, request *http.Request, _ httprouter.Params) {
+		data, err := ioutil.ReadFile(path)
+		if err != nil {
+			fmt.Fprint(writer, err)
+		}
 
 		enableCors(&writer, "application/json")
 
