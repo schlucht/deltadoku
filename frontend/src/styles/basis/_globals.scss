@@ -1,31 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.ots-blue {
+    background-color: $col-blue;
+    color: $col-white;
 }
 
-html {
-    font-size: 62.5%;;
+.ots-orange {
+    background-color: $col-orange;
+    color: $col-white;
 }
 
-body {
-    font-size: $font-size;
-    font-family: "Inter", sans-serif
+.ots-orange-light {
+    background-color: $col-orange-50;
+    color: $col-white;
 }
-body::after {
-    content: '';    
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: $bg-image;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.2;
-    z-index: -100;
 
+.ots-mid-blue {
+    background-color: $col-mid-blue;
+    color: $col-white;
 }
-em, i {
-    font-family: "Spectral" sans-serif;
+.ots-gray {
+    background-color: $col-gray;
+    color: $col-black;
 }
+
+

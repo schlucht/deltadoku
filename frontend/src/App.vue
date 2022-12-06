@@ -1,25 +1,13 @@
-<script setup lang="ts">
-import OtsHeader from './components/OtsHeader.vue';
-import OtsFooter from './components/OtsFooter.vue';
-</script>
-
 <template>
-    <div>
-        <ots-header></ots-header>
-        <main>            
-            <router-view />
-        </main>        
-        <ots-footer></ots-footer>
-    </div>
+  <div class="container-fluid">
+    <header-layout />
+    <router-view />
+  </div>
 </template>
-
-<style lang="scss" scoped>
-    div  {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 10vh 1fr 10vh;
-    }
-    main {
-        
-    }
+<script setup>
+import HeaderLayout from './layouts/HeaderLayout.vue';
+</script>
+<style lang="scss">
+@import './styles/index.scss';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 </style>
