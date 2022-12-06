@@ -26,3 +26,5 @@ func GetFactory(path string) HttpHandler {
 		writer.Write([]byte(data))
 	}
 }
+
+
