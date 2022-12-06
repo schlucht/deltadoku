@@ -8,7 +8,7 @@ import (
 	"github.com/schlucht/deltadoku/web/routes"
 )
 
-const PORT = ":8080"
+const PORT = ":1234"
 
 func LoadServer() {
 	router := httprouter.New()
