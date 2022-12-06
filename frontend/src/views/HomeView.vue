@@ -1,7 +1,7 @@
 <template>
   <div class="row ms-1">
     <div class="col-md-2 ots-gray vh-100">
-      Seitenleiste
+      <FhxFileLoad />
     </div>
     <div class="col-md-10 vh-100">
       Mittelbereich
@@ -10,6 +10,6 @@
 </template>
 
 <script setup>
-// @ is an alias to /src
+import FhxFileLoad from '@/components/FhxFileLoad.vue'
 
 </script>
