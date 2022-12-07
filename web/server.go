@@ -5,20 +5,28 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/schlucht/deltadoku/web/routes"
+	"github.com/schlucht/deltadoku/web/cors"
+	"github.com/schlucht/deltadoku/web/factory"
+	"github.com/schlucht/deltadoku/web/fhx"
 )
 
 const PORT = ":1234"
 
 func LoadServer() {
 	router := httprouter.New()
+	cors.SetupCors(router)
+	factory.SetupRouter(router)
+	fhx.SetupRouter(router)
 
-	router.GET(routes.RootName, routes.GetRoot("./api/data/units.json"))
-	router.GET(routes.UPName, routes.GetUP("units.json"))
-	router.GET(routes.FactoryName, routes.GetFactory("./api/data/units.json"))
-	router.GET(routes.UPFile, routes.PostUP())
+	log.Println("Server starting. Listening on " + PORT)
 
-	server := http.Server{Addr: PORT, Handler: router}
+	// start server on https port
+	server := http.Server{
+		Addr:    PORT,
+		Handler: router,
+	}
 	err := server.ListenAndServe()
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

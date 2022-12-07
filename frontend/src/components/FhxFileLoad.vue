@@ -2,21 +2,24 @@
   <div>
     <input @change="loadFile($event)"
            type="file">
+          <p>{{txt}}</p>
   </div>
 </template>
 <script setup>
-import axios from 'axios'
+import fhxService from '@/services/fhxService'
+import { ref } from 'vue';
+
+const txt = ref('')
 
 const loadFile = (e) => {
   let file = e.target.files[0]
-  console.log(file)
   const rf = new FileReader()
-  rf.readAsText(file)
-
-  rf.onload = async () => {
-    console.log(rf.result)
-    await axios.get("http://localhost:1234/api/up/files=" + rf.result)
+  rf.onload = () => {
+    const s = rf.result
+    txt.value = s
+    fhxService(s)
   }
+  rf.readAsText(file)
 }
 
 </script>

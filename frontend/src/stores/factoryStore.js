@@ -1,8 +1,5 @@
 import { reactive, readonly } from 'vue';
-
-import { Factory } from '@/models/factories/Factory'
-
-const factoryState: Factory[] = [];
+const factoryState = [];
 
 const state = reactive({factoryState})
 

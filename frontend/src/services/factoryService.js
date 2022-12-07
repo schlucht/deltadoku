@@ -1,11 +1,13 @@
 import { Factory } from '@/models/factories/Factory';
 import http from './http-commons'
+
+
 class FactoryService {
-  Factories: Factory[] = [];
-     async getFactories(): Promise<Factory[]> {
+
+     async getFactories() {
         try {
             const response =  await http.get('/factory')
-            const factories = await response.data.factories as Factory[]
+            const factories = await response.data
             return factories
 
         } catch( error ) {
