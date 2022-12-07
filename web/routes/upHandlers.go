@@ -3,6 +3,8 @@ package routes
 import (
 	"fmt"
 	"net/http"
+	"strings"
+	"time"
 
 	"github.com/julienschmidt/httprouter"
 )
@@ -20,6 +22,9 @@ func GetUP(path string) HttpHandler {
 
 func PostUP() HttpHandler {
 	return func(writer http.ResponseWriter, request *http.Request, ps httprouter.Params) {
-		fmt.Fprintf(writer, "Hello, %s!\n", ps.ByName("name"))
+		f := strings.Split(ps.ByName("files"), "=")
+		time.Sleep(2 * time.Second)
+		fmt.Printf("%s\n", f[1])
+		// fmt.Fprintf(writer, "Hello, %s!\n", f[1])
 	}
 }

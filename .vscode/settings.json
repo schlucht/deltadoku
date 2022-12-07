@@ -12,7 +12,7 @@
   "editor.formatOnSave": true,
   "editor.letterSpacing": 0.5,
   "editor.lineHeight": 25,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
@@ -25,6 +25,8 @@
   "prettier.printWidth": 120,
   "prettier.bracketSpacing": true,
   "prettier.singleQuote": true,
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "html.format.wrapAttributes": "preserve-aligned",
   "editor.codeActionsOnSave": {
 
   },

@@ -7,12 +7,12 @@
     <ul class="nav nav-pills text-white">
       <li class="nav-item">
         <RouterLink class="nav-link text-white"
-           aria-current="page"
-           to="/">Übersicht</RouterLink>
+                    aria-current="page"
+                    to="/">Übersicht</RouterLink>
       </li>
       <li class="nav-item">
         <RouterLink class="nav-link text-white"
-           to="/daten">Standard Daten</RouterLink>
+                    to="/daten">Standard Daten</RouterLink>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white"
