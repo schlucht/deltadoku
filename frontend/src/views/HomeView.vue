@@ -11,9 +11,21 @@
 
 <script setup>
 import FhxFileLoad from '@/components/FhxFileLoad.vue'
-import fs from '@/services/factoryService.js'
-
-const f = fs.getFactories()
-.then((d) => console.log(d));
-
+const paylod = {
+  email: "web@jagolo.ch",
+  passwod: "pwd",
+}
+const requestOptions = {
+  method: "POST",
+  body: JSON.stringify(paylod)
+}
+fetch("https://schlucht-bookish-space-pancake-4qvxg6667p9cqgqv-1234.preview.app.github.dev/users/login", requestOptions)
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.error) {
+      console.log("Error: ", data.message)
+    } else {
+      consolelog(data)
+    }
+  })
 </script>
