@@ -19,7 +19,7 @@ const requestOptions = {
   method: "POST",
   body: JSON.stringify(paylod)
 }
-fetch("https://schlucht-bookish-space-pancake-4qvxg6667p9cqgqv-1234.preview.app.github.dev/users/login", requestOptions)
+fetch("https://1234-schlucht-deltadoku-m1nniqkn8mj.ws-eu78.gitpod.io/users/login", requestOptions)
   .then((response) => response.json())
   .then((data) => {
     if (data.error) {
