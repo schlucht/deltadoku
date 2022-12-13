@@ -11,6 +11,7 @@
 
 <script setup>
 import FhxFileLoad from '@/components/FhxFileLoad.vue'
+import axios from 'axios'
 const paylod = {
   email: "web@jagolo.ch",
   passwod: "pwd",
@@ -19,7 +20,7 @@ const requestOptions = {
   method: "POST",
   body: JSON.stringify(paylod)
 }
-fetch("https://1234-schlucht-deltadoku-m1nniqkn8mj.ws-eu78.gitpod.io/users/login", requestOptions)
+axios("https://1234-schlucht-deltadoku-m1nniqkn8mj.ws-eu78.gitpod.io/users/login", requestOptions)
   .then((response) => response.json())
   .then((data) => {
     if (data.error) {
