@@ -17,7 +17,6 @@ func (app *application) Login(w http.ResponseWriter, r *http.Request) {
 	}
 	var creds credentials
 	var payload jsonResponse
-
 	err := json.NewDecoder(r.Body).Decode(&creds)
 	if err != nil {
 		app.errorLog.Println("invalid json")
@@ -41,6 +40,7 @@ func (app *application) Login(w http.ResponseWriter, r *http.Request) {
 		app.errorLog.Println(err)
 	}
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.WriteHeader(http.StatusOK)
 	w.Write(out)
 }
