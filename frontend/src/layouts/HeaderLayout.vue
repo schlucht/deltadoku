@@ -15,8 +15,8 @@
                     to="/daten">Standard Daten</RouterLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white"
-           href="#">Rezepte</a>
+        <RouterLink class="nav-link text-white"
+                    to="/product">Produkt Rezepte</RouterLink>
       </li>
     </ul>
   </header>

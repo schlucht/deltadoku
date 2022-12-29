@@ -13,6 +13,7 @@ func setupAllowedOrigins() {
 	allowedOrigins["https://localhost:3443"] = true
 	allowedOrigins["http://localhost:4200"] = true
 	allowedOrigins["https://8080-schlucht-deltadoku-4i42upsur99.ws-eu77.gitpod.io"] = true
+	allowedOrigins["http://localhost:8080"] = true
 }
 
 func SetupCors(router *httprouter.Router) {
@@ -24,16 +25,17 @@ func SetupCors(router *httprouter.Router) {
 func addAccessControlsToHeader(rHeader http.Header, wHeader http.Header) {
 
 	// Set Access-Control-Allow-Origin if the origin is in our allowedOrigins list
-	origin := rHeader.Get("Origin")
-	if origin != "" {
-		_, ok := allowedOrigins[origin]
-		if ok {
-			wHeader.Add("Access-Control-Allow-Origin", origin)
-		}
-	}
+	// origin := rHeader.Get("Origin")
+	// if origin != "" {
+	// 	_, ok := allowedOrigins[origin]
+	// 	if ok {
+	// 		wHeader.Add("Access-Control-Allow-Origin", origin)
+	// 	}
+	// }
 	wHeader.Add("Access-Control-Allow-Credentials", "true")
 	wHeader.Add("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Accept, Origin, Cache-Control, X-Requested-With")
 	wHeader.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+	wHeader.Add("Access-Control-Allow-Origin", "*")
 }
 
 func setupDefaultHttpOptions(router *httprouter.Router) {

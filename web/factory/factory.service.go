@@ -9,7 +9,7 @@ import (
 	"github.com/schlucht/deltadoku/web/cors"
 )
 
-const path = "./api/data/units.json"
+const path = "./api/data/factories.json"
 
 func SetupRouter(router *httprouter.Router) {
 	router.GET("/api/factory", cors.Cors(getFactory))
@@ -20,7 +20,7 @@ func getFactory(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	if err != nil {
 		fmt.Print(err)
 	}
-	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(data))
 }

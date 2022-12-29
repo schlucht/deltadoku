@@ -9,17 +9,18 @@ import (
 )
 
 func SetupRouter(router *httprouter.Router) {
-	router.GET("/api/fhx/:fhxText", cors.Cors(getReadFhx))
+	router.POST("/api/fhx/:fhxText", cors.Cors(postReadFhx))
 }
 
-func getReadFhx(w http.ResponseWriter, r *http.Request, fhx httprouter.Params) {
+func postReadFhx(w http.ResponseWriter, r *http.Request, fhx httprouter.Params) {
 
 	data := fhx.ByName("fhxText")
-	fmt.Println(data)
 
-	w.WriteHeader(http.StatusOK)
-	w.Header().Set("Content-Type", "application/json")
+	fmt.Printf("%v\n", data)
 
+	// w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "text/plain")
+	w.WriteHeader(http.StatusAccepted)
 	w.Write([]byte(data))
 
 }

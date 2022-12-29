@@ -1,0 +1,7 @@
+{
+  "factories": [
+    {"name": "D29" },
+    { "name" : "Penta" },
+    { "name": "E13" }
+  ]
+}

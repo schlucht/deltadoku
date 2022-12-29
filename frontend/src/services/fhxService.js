@@ -1,17 +1,17 @@
 
 import http from "./http-commons";
 
-export default  async (fhxText) => {
+const getUpData = async (fhxText) => {
         try {
-            const response =  await (await http.get(`/fhx/fhxText= ${fhxText}`)).headers({
-              header: {"Access-Control-Allow-Origin": '*', "Content-Type": "text/plain"}
-        })
+            const response =  await http.post('/fhx/fhxText=' + fhxText)
             const fhx = await response.data
             return fhx
 
         } catch( error ) {
-            const err = new Error("http axio Error (getFactories): " + error)
+            const err = new Error("http axio Error (getUpData): " + error)
             throw(err)
         }
 
     }
+
+export { getUpData }

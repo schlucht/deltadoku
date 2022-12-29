@@ -1,11 +1,27 @@
 import { reactive, readonly } from 'vue';
-const factoryState = [];
+import fs from '@/services/factoryService.js'
 
-const state = reactive({factoryState})
 
-const getters = {}
+const state = reactive({
+  Factories: [],
+  error: null
+})
 
-const actions = {}
+const getters = {
+
+}
+
+const actions = {
+  getFactories: async () => {
+    try {
+        const factories = await fs.getFactories()
+        const data = await factories
+        state.Factories = data
+    } catch(err) {
+      state.error = err
+    }
+  }
+}
 
 export default {
   state: readonly(state),
