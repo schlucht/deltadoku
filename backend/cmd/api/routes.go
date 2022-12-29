@@ -13,7 +13,7 @@ func (app *application) routes() http.Handler {
 	mux.Use(middleware.Recoverer)
 	mux.Use(cors.Handler(cors.Options{
 		// AllowedOrigins:   []string{"https://*", "http://*", "https://8080-schlucht-deltadoku-m1nniqkn8mj.ws-eu78.gitpod.io"},
-		AllowedOrigins:   []string{"https://8080-schlucht-deltadoku-qbl6ggjptwa.ws-eu78.gitpod.io"},
+		AllowedOrigins:   []string{"http://*", "https://8080-schlucht-deltadoku-7pyrqhxe33k.ws-eu80.gitpod.io/"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
 		ExposedHeaders:   []string{"Link"},
@@ -21,5 +21,6 @@ func (app *application) routes() http.Handler {
 		MaxAge:           300,
 	}))
 	mux.Get("/users/login/", app.Login)
+	mux.Post("/users/login/", app.Login)
 	return mux
 }

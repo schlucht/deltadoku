@@ -5,7 +5,7 @@ build:
 	go build -o bin/main main.go
 
 run:
-	go run web/main.go
+	go run cmd/api/*.go
 
 
 compile:
