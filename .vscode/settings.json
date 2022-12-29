@@ -11,7 +11,7 @@
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
   "editor.letterSpacing": 0,
-  "editor.lineHeight": 25,
+  "editor.lineHeight": 0,
   "editor.minimap.enabled": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggestSelection": "first",
