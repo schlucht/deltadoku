@@ -13,10 +13,10 @@
   --light-gray-50: rgba(219, 219, 219, .5);
   --light-gray-25: rgba(219, 219, 219, 0.25);
 
-  --mid-blue: rgba(79, 140, 236, 1);
-  --mid-blue-75: rgba(79, 140, 236, .75);
-  --mid-blue-50: rgba(79, 140, 236, .5);
-  --mid-blue-25: rgba(79, 140, 236, .25);
+  --mid-blue: hsl(217, 81%, 62%);
+  --mid-blue-75: hsla(217, 81%, 77%);
+  --mid-blue-50: hsl(217, 81%, 88%);
+  --mid-blue-25: hsl(217, 81%, 90%);
 
   --pale-blue: rgba(171,207,227,1);
   --pale-blue-75: rgba(171,207,227,.75);

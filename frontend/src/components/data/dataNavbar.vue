@@ -2,10 +2,41 @@
 <template>
   <div class="data-nav">
     <ul>
-      <RouterLink active-class="active" to="daten">Anlagen</RouterLink>
+      <li>
+        <RouterLink active-class="active" to="/data/factory">Anlagen</RouterLink>
+      </li>
+      <li>
+        <RouterLink active-class="active" to="/data/recipe">Rezepte</RouterLink>
+      </li>
+      <li>
+        <RouterLink active-class="active" to="/data/unit">Unit Procedure</RouterLink>
+      </li>
+      <li>
+        <RouterLink active-class="active" to="/data/admin">Admin</RouterLink>
+      </li>
     </ul>
   </div>
 </template>
-<script scoped>
+<style coped>
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: .2rem;
+}
 
-</script>
+li {
+  background-color: var(--mid-blue);
+  color: white;
+  padding: .5rem 1rem;
+}
+
+li a {
+  color: var(--white);
+  font-size: 2.0rem;
+}
+
+li:hover a {
+  color: var(--mid-blue-25);
+}
+</style>
