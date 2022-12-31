@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+const props = defineProps(["factories"])
+</script>
 <template>
   <div class="">
     <h2>Anlagen</h2>
@@ -8,25 +10,9 @@
         <div class="col col-header">Anlage</div>
         <div class="col col-header">-</div>
       </div>
-      <div class="table-row">
-        <div class="col col-id">f56+sdafdsa6f6adsf6</div>
-        <div class="col col-text">MZA-D29</div>
-        <div class="col col-change">
-          <button><i class="bi bi-pencil"></i></button>
-          <button><i class="bi bi-trash3"></i></button>
-        </div>
-      </div>
-      <div class="table-row">
-        <div class="col col-id">f56+sdafdsa6f6adsf6</div>
-        <div class="col col-text">MZA-D29</div>
-        <div class="col col-change">
-          <button><i class="bi bi-pencil"></i></button>
-          <button><i class="bi bi-trash3"></i></button>
-        </div>
-      </div>
-      <div class="table-row">
-        <div class="col col-id">f56+sdafdsa6f6adsf6</div>
-        <div class="col col-text">MZA-D29</div>
+      <div class="table-row" v-for="factory in factories" :key="factory['factory-id']">
+        <div class="col col-id">{{ factory['factory-id'] }}</div>
+        <div class="col col-text">{{ factory['factory-name'] }}</div>
         <div class="col col-change">
           <button><i class="bi bi-pencil"></i></button>
           <button><i class="bi bi-trash3"></i></button>
@@ -48,7 +34,7 @@
         <button class="button cancel">Abbrechen</button>
       </div>
     </form>
-    
+
   </div>
 </template>
 <style scoped>
