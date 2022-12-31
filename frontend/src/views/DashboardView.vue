@@ -5,27 +5,21 @@ import HomeIcon from '../components/icons/HomeIcon.vue';
 </script>
 <template>
   <main>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
+    <div class="card-container">
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </div>
   </main>
 </template>
 <style scoped>
-main {
+.card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1.5rem;
-  width: 70%;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 570px) {
-  main {
-    width: 100%;
-  }
+  gap: .5rem;
+  margin-top: 0.5rem;
+  
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="data-nav">
+  <div>
     <ul>
       <li>
         <RouterLink active-class="active" to="/data/factory">Anlagen</RouterLink>
@@ -17,7 +17,7 @@
     </ul>
   </div>
 </template>
-<style coped>
+<style scoped>
 ul {
   width: 100%;
   display: flex;

@@ -73,14 +73,7 @@ h1 {
   font-weight: 300;
   color: var(--blue);
 }
-.blue {
-  background-color: var(--blue-75);
-  color: white;
-}
-.gray {
-  background-color: var(--gray-75);
-  color: var(--blue);
-}
+
 h2, h3 {
   font-size: 4rem;
   font-weight: 300;
@@ -91,9 +84,43 @@ h4, h5, h6 {
   font-weight: 700;
   color: var(--black);
 }
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: var(--mid-blue);
+  color: white;
+  font-size: 1.6rem;
+  display: flex;
+    gap: 2rem;
+}
+button:hover {
+  background-color: var(--mid-blue-50);
+  color: var(--black);
+}
 a {
   text-decoration: none;
 }
 a:hover, a:active {
   color: var(--mid-blue);
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.blue {
+  background-color: var(--blue-75);
+  color: white;
+}
+
+.gray {
+  background-color: var(--gray-75);
+  color: var(--blue);
 }

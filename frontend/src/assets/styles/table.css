@@ -1,0 +1,52 @@
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1rem auto;
+
+}
+.table button {
+  padding: .7rem;
+  font-size: 2rem;
+}
+.table-row, .table-row-header {
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  border-bottom: solid 1px gray;
+  padding: 0.3rem 0
+}
+.table-row-header {
+  border: none;
+}
+.table-row:nth-child(odd) {
+  background-color: var(--light-gray-25);
+}
+.col {
+  border: solid 1px white;
+  padding: 0 1rem;
+  width: 100%;
+  border-right: solid 1px green;
+}
+.col:last-child {
+  border: none;
+}
+.col-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: var(--light-gray-50);
+  border: none;
+}
+.col-change {
+  display: flex;
+  gap: 1rem;
+}
+.table-footer{
+  margin-top: 1rem;
+
+}
+.bi-trash3 {
+  color: red
+}

@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+import FactoryForm from '../../components/data/factory/FactoryForm.vue';
+
+</script>
 <template>
   <div>
-    <h1>Factory</h1>
+    <FactoryForm></FactoryForm>
   </div>
 </template>
 <style scoped>

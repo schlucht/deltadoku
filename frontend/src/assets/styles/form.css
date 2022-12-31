@@ -1,0 +1,7 @@
+.form {
+  border: solid 3px var(--black);
+}
+.form button {
+  padding: 1rem;
+  font-size: 2rem;
+}
