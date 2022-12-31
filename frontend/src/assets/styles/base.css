@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Spectral:ital,wght@1,200&display=swap');
+
+:root {
+  --white: white;
+  --black: black;
+  --blue: rgba(0, 0, 255, 1);
+  --blue-75: rgba(0, 0, 255, .75);
+  --blue-50: rgba(0, 0, 255, .50);
+  --blue-25: rgba(0, 0, 255, .25);
+
+  --light-gray: rgba(219, 219, 219, 1);
+  --light-gray-75: rgba(219, 219, 219, .75);
+  --light-gray-50: rgba(219, 219, 219, .5);
+  --light-gray-25: rgba(219, 219, 219, 0.25);
+
+  --mid-blue: rgba(79, 140, 236, 1);
+  --mid-blue-75: rgba(79, 140, 236, .75);
+  --mid-blue-50: rgba(79, 140, 236, .5);
+  --mid-blue-25: rgba(79, 140, 236, .25);
+
+  --pale-blue: rgba(171,207,227,1);
+  --pale-blue-75: rgba(171,207,227,.75);
+  --pale-blue-50: rgba(171,207,227,.50);
+  --pale-blue-25: rgba(171,207,227,.25);
+
+  --acc-orange: rgba(255,107,51,1);
+  --acc-orange-75: rgba(255,107,51,.75);
+  --acc-orange-50: rgba(255,107,51,.50);
+  --acc-orange-25: rgba(255,107,51,.25);
+
+  --mint: rgba(119,238,223,1);
+  --mint-75: rgba(119,238,223,.75);
+  --mint-50: rgba(119,238,223,.50);
+  --mint-25: rgba(119,238,223,.25);
+
+  --font-regular:'Inter', 'Arial Roman',sans-serif;
+  --font-italic: 'Sectral', Georgia, italic;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --clr-bg: var(--light-gray-50);
+  --clr-font: var(--black)
+}
+
+body.black {
+  --clr-bg: var(--black);
+  --clr-font: var(--white);
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-font);
+  font-size: 1.6rem;
+  font-family: var(--font-regular);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  min-width: 420px;
+}
+
+
+
+h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  color: var(--blue);
+}
+.blue {
+  background-color: var(--blue-75);
+  color: white;
+}
+.gray {
+  background-color: var(--gray-75);
+  color: var(--blue);
+}
+h2, h3 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--blue);
+}
+h4, h5, h6 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+}
+a {
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: var(--mid-blue);
+}
