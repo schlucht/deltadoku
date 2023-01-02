@@ -7,13 +7,20 @@ async function AllFactories() {
   const data = await axios.get(api + '/allFactories')
   const result = await data.data
   if (!result.error) {
-    console.error(JSON.parse(result.message))
+    console.error("Parse Error ", JSON.parse(result.message))
     return
   }
+
   const json = JSON.parse(result.message)
+
   return json
   } catch (error) {
-    console.error("Allfactories ", error)
+    if (error.code === 'ERR_NETWORK') {
+      console.log("DB läuft nicht")
+      return {error: true}
+    }
+    console.error("Allfactories: ", error)
+    return {}
   }
 }
 

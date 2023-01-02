@@ -1,14 +1,14 @@
 [
   {
-    "id": "165fds4f56sd4f96sa",
-    "factory":"MZA D29"
+    "factoryId": "165fds4f56sd4f96sa",
+    "factoryName":"MZA D29"
   },
   {
-    "id": "54g89fgs4svf98s4dasd",
-    "factory":"Penta"
+    "factoryId": "54g89fgs4svf98s4dasd",
+    "factoryName":"Penta"
   },
   {
-    "id": "65f165da4fad1gvf6sdgs",
-    "factory":"MZA E13"
+    "factoryId": "65f165da4fad1gvf6sdgs",
+    "factoryName":"MZA E13"
   }
 ]

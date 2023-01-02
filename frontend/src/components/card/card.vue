@@ -1,10 +1,12 @@
-<script setup></script>
+<script setup>
+const props = defineProps(["name"])
+</script>
 <template>
   <div class="card">
     <RouterLink to="/">
-      <h4>Unitproceduren von MZA D29</h4>
+      <h4>Unitproceduren von {{ name }}</h4>
     </RouterLink>
-    <p>Rezepte und Standart UP in D29</p>
+    <p>Rezepte und Standart UP in {{ name }}</p>
     <div class="card-body">
       <ul>
         <li>

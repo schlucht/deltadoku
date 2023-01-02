@@ -1,22 +1,27 @@
 <script setup>
 import FactoryForm from '../../components/data/factory/FactoryForm.vue';
 import { inject, ref, onBeforeMount } from 'vue';
+import OtsMessage from '../../components/layouts/OtsMessage.vue';
 const factoryStore = inject('factoryStore')
 
 const store = factoryStore
+const { state, FactoriesName, LoadFactories, } = store
 
-const { state, FactoriesName } = store
-console.log(FactoriesName.value)
-const factories = ref(null)
 const names = ref(null)
-onBeforeMount(async () => {
-  factories.value = await state.factories
-  names.value = await FactoriesName.value
+const factories = ref(null)
+
+
+onBeforeMount(() => {
+  LoadFactories()
+  names.value = FactoriesName.value
+  factories.value = state.factories
 })
 </script>
+
 <template>
   <div>
-    <FactoryForm :factories="factories"></FactoryForm>
+    <OtsMessage v-if="state.loadError.error" :message="state.loadError.message"></OtsMessage>
+    <FactoryForm :factories="factories" v-if="!state.loadError.error"></FactoryForm>
   </div>
 </template>
 <style scoped>

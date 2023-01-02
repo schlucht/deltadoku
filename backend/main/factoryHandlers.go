@@ -1,25 +1,19 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+
+	"github.com/schlucht/deltavdocku/models"
+	_ "github.com/schlucht/deltavdocku/models"
 )
 
 func (app *application) GetFactories(w http.ResponseWriter, r *http.Request) {
-	type credentials struct {
-		UserName string `json:"email"`
-		Password string `json:"password"`
-	}
-	var creds credentials
 
-	err := app.readJSON(w, r, &creds)
-	if err != nil {
-		app.errorLog.Println(err)
-		app.errorJSON(w, err)
-	}
-
-	app.infoLog.Println(creds.UserName, creds.Password)
-
-	err = app.acceptJSON(w, "Signed in")
+	var factory = models.Factory{}
+	data := factory.AllFactories()
+	fmt.Println(data)
+	err := app.acceptJSON(w, data)
 	if err != nil {
 		app.errorLog.Println(err)
 	}

@@ -1,19 +1,22 @@
 package models
 
-import "log"
+import (
+	"encoding/json"
+	"log"
+)
 
 type Factory struct {
-	FactoryId   string `json:"factory-id"`
-	FactoryName string `json:"factory-name"`
+	FactoryId   string `json:"factoryId"`
+	FactoryName string `json:"factoryName"`
 }
 
-func (m *Factory) AllFactories() []*Factory {
-	files := &jsonFile{
-		name: "factories",
-	}
-	err := files.readFile()
+func (m *Factory) AllFactories() string {
+
+	data, err := readFile("factories")
+	var f []Factory
+	json.Unmarshal(data, &f)
 	if err != nil {
 		log.Fatal(err)
 	}
-	return nil
+	return string(data)
 }

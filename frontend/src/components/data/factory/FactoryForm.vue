@@ -10,9 +10,9 @@ const props = defineProps(["factories"])
         <div class="col col-header">Anlage</div>
         <div class="col col-header">-</div>
       </div>
-      <div class="table-row" v-for="factory in factories" :key="factory['factory-id']">
-        <div class="col col-id">{{ factory['factory-id'] }}</div>
-        <div class="col col-text">{{ factory['factory-name'] }}</div>
+      <div class="table-row" v-for="factory in factories" :key="factory.FactoryId">
+        <div class="col col-id">{{ factory.FactoryId }}</div>
+        <div class="col col-text">{{ factory.FactoryName }}</div>
         <div class="col col-change">
           <button><i class="bi bi-pencil"></i></button>
           <button><i class="bi bi-trash3"></i></button>

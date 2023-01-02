@@ -1,27 +1,18 @@
 package models
 
 import (
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 )
 
-type jsonFile struct {
-	name string
-	path string
-	data interface{}
-}
-
-func (m *jsonFile) readFile() error {
-
-	m.path = fmt.Sprintf("../database/%s.json", m.name)
-	content, err := ioutil.ReadFile(m.path)
+func readFile(path string) ([]byte, error) {
+	p := fmt.Sprintf("./database/%s.json", path)
+	content, err := ioutil.ReadFile(p)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	err = json.Unmarshal(content, &m.data)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	return nil
+	return content, nil
 }
